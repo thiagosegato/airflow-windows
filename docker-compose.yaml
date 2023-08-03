@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  airflow:
+    image: apache/airflow:2.6.3
+    container_name: airflow
+    command: standalone
+    environment:
+      AIRFLOW__CORE__FERNET_KEY: ZLXlcq1oNZTXF5O6sieIav3gBglLl6xfUPFyfTVxK3Q=
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./plugins:/opt/airflow/plugins
+      - ./standalone_admin_password.txt:/opt/airflow/standalone_admin_password.txt
