@@ -1,10 +1,10 @@
-# Airflow Windows
-Inicie o Apache Airflow em sua máquina. Este projeto roda em Windows ou Linux!
+# Apache Airflow - Windows
+Inicie o Apache Airflow em sua máquina. Este projeto roda em Windows ou Linux! Porém recomenda-se a utilização de uma distribuição linux, para o melhor aproveitamento no desenvolvimento de suas DAGs.
 
 ## Pré-requisitos
 1. Docker instalado [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/);
 2. Comando `docker-compose` funcional;
-3. Passo Opcional: Instalar Vscode;
+3. <i>Passo Opcional</i>: Instalar Vscode;
 
 ## Rodando o projeto
 1. Clone o projeto:
@@ -15,7 +15,7 @@ Inicie o Apache Airflow em sua máquina. Este projeto roda em Windows ou Linux!
     ```bash
     cd airflow-windows
     ```
-    2.1. Passo Opcional: A partir daqui você poderá optar a utilizar o Vscode. Caso prefira, digite o comando abaixo:
+    2.1. <i>Passo Opcional</i>: A partir daqui você poderá optar a utilizar o Vscode. Caso prefira, digite o comando abaixo:
       ```bash
       code .
       ```
@@ -31,6 +31,7 @@ Usuário: admin<br>
 Senha: Copie a senha no arquivo `standalone_admin_password.txt`
 
 ## Links úteis
+- [Apache Airflow](https://airflow.apache.org/)
 - [NBA Data Crawler](https://github.com/caiocolares/nba-crawler-airflow)
 - [Agendamentos e rodagens das DAGs](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dag-run.html)
 - [Crontab Guru](https://crontab.guru/)
