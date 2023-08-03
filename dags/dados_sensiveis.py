@@ -2,7 +2,7 @@ from airflow.models import DAG, Variable
 from airflow.utils.dates import days_ago
 from airflow.decorators import task
 
-# Acesse http://localhost:8080/dddd e crie a variável (my_password)
+# Acesse http://localhost:8080/variable/list/ e crie a variável (my_password)
 
 with DAG(dag_id='dados_sensiveis',
          start_date=days_ago(2),

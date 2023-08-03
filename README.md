@@ -29,7 +29,7 @@ docker-compose up
 ```
 
 ## Acessando a ferramenta
-Acesse [http://localhost:8080](http://localhost:8080)<br>
+Acesse [http://localhost:8080/](http://localhost:8080/)<br>
 Usuário: admin<br>
 Senha: Copie a senha no arquivo `standalone_admin_password.txt`
 

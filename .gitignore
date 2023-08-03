@@ -24,6 +24,7 @@ share/python-wheels/
 MANIFEST
 
 logs/
+data_lake/
 *.cfg
 *.db
 webserver_config.py

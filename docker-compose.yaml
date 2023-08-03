@@ -12,4 +12,5 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ./plugins:/opt/airflow/plugins
+      - ./data_lake:/opt/airflow/data_lake
       - ./standalone_admin_password.txt:/opt/airflow/standalone_admin_password.txt
