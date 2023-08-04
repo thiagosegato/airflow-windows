@@ -30,6 +30,13 @@ Acesse [http://localhost:8080/](http://localhost:8080/)<br>
 Usuário: admin<br>
 Senha: Copie a senha no arquivo `standalone_admin_password.txt`
 
+## Baixando projeto
+1. Execute os dois comandos abaixo, ou somente `docker-compose down`:
+    ```bash
+    docker-compose down
+    docker container prune -f
+    ```
+
 ## Links úteis
 - [Apache Airflow](https://airflow.apache.org/)
 - [NBA Data Crawler](https://github.com/caiocolares/nba-crawler-airflow)
