@@ -42,3 +42,4 @@ Senha: Copie a senha no arquivo `standalone_admin_password.txt`
 - [NBA Data Crawler](https://github.com/caiocolares/nba-crawler-airflow)
 - [Agendamentos e rodagens das DAGs](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dag-run.html)
 - [Crontab Guru](https://crontab.guru/)
+- [Conceito DAG](https://pt.wikipedia.org/wiki/Grafos_ac%C3%ADclicos_dirigidos)
