@@ -22,6 +22,8 @@ class NBASalaryOperator(BaseOperator):
 
         self.process_date = "{{ ds }}"
         self.url = 'https://www.espn.com/nba/salaries/_/year/{year}/page/{page}/seasontype/4'
+        self.headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0"}
+
 
         
 
@@ -56,7 +58,7 @@ class NBASalaryOperator(BaseOperator):
     def request_page(self):
         conteudo = []
 
-        page = requests.get(self.url.format(year=self.end_year, page=self.page))
+        page = requests.get(self.url.format(year=self.end_year, page=self.page), headers=self.headers)
         soup = BeautifulSoup(page.text, 'lxml')
         table = soup.find('table', {"class": "tablehead"})
 
