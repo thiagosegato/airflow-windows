@@ -20,6 +20,7 @@ class NBABioOperator(BaseOperator):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.process_date = "{{ ds }}"
+        self.headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0"}
 
     def load_players(self):
         df = pd.read_csv(self.file_source)
@@ -30,7 +31,7 @@ class NBABioOperator(BaseOperator):
     # HT/WT, birthday, college, birthplace, draft info
     def request_bio(self, playerId, playerSlug):
         url = "https://www.espn.com/nba/player/bio/_/id/{id}/{slug}".format(id=playerId, slug=playerSlug)
-        response = requests.get(url)
+        response = requests.get(url, headers=self.headers)
         html = response.content
         soup = BeautifulSoup(html, 'html.parser')
         biography_section = soup.find(class_='Card Bio')
