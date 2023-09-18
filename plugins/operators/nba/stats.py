@@ -16,10 +16,11 @@ class NBAStatsOperator(BaseOperator):
         super().__init__(*args, **kwargs)
         self.url = "https://site.web.api.espn.com/apis/common/v3/sports/basketball/nba/statistics/byathlete?region=us&lang=en&contentorigin=espn&isqualified=true&page={page}&limit=50&sort=general.avgMinutes%3Adesc&season={year}&seasontype=2"
         self.process_date = "{{ ds }}"
+        self.headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0"}
 
     def request_data(self):
         print('Requesting page {page}'.format(page=self.page))
-        resp = requests.get(self.url.format(year=self.year, page=self.page))
+        resp = requests.get(self.url.format(year=self.year, page=self.page), headers=self.headers)
         self.page += 1
         return resp.json()
 
